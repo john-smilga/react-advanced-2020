@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const UseStateArray = () => {
   const data = [
@@ -7,7 +7,7 @@ const UseStateArray = () => {
     { id: 3, name: 'susan' },
     { id: 4, name: 'anna' },
   ];
-  const [people, setPeople] = useState(data);
+  const [people, setPeople] = React.useState(data);
 
   const removeItem = (id) => {
     let newPeople = people.filter((person) => person.id !== id);

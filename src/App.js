@@ -1,9 +1,9 @@
 import React from 'react';
-import UseStateArray from './lectures/1-useState-tutorial/final/3-useState-array';
+import Example from './lectures/1-useState-tutorial/final/5-useState-counter';
 function App() {
   return (
     <>
-      <UseStateArray />
+      <Example />
     </>
   );
 }

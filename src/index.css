@@ -150,6 +150,8 @@ p {
   font-size: 1rem;
   letter-spacing: var(--spacing);
   margin-top: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   cursor: pointer;
   transition: var(--transition);
 }
