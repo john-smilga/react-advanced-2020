@@ -1,5 +1,5 @@
 import React from 'react';
-import Example from './lectures/3-useEffect-tutorial/final/1-useEffect-basics';
+import Example from './lectures/4-conditional-rendering/z-show-hide';
 function App() {
   return (
     <>
