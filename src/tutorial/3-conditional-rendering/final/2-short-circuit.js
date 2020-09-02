@@ -9,7 +9,7 @@ const ShortCircuit = ({ name }) => {
   // const secondValue = text && 'hello world';
 
   return (
-    <div className='example'>
+    <>
       {/* <h1>{firstValue}</h1>
       <h1>value : {secondValue}</h1> */}
       {/* {if(isError){console.log('something');}} */}
@@ -27,7 +27,7 @@ const ShortCircuit = ({ name }) => {
           <h2>there is no error</h2>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

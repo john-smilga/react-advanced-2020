@@ -1,10 +1,11 @@
 import React from 'react';
-import Example from './lectures/3-conditional-rendering/final/1-multiple-returns';
+import { data } from './data';
+import Setup from './tutorial/5-forms/final/2-multiple-inputs';
 function App() {
   return (
-    <>
-      <Example />
-    </>
+    <div className='container'>
+      <Setup />
+    </div>
   );
 }
 

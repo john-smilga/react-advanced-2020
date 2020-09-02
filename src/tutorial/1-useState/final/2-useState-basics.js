@@ -18,12 +18,12 @@ const UseStateBasics = () => {
   };
 
   return (
-    <div className='example'>
+    <React.Fragment>
       <h1>{text}</h1>
       <button type='button' className='btn' onClick={handleClick}>
         change title
       </button>
-    </div>
+    </React.Fragment>
   );
 };
 

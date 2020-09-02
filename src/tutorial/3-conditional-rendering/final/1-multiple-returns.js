@@ -26,20 +26,20 @@ const MultipleReturns = () => {
 
   if (isLoading) {
     return (
-      <div className='example'>
+      <div>
         <h1>Loading...</h1>
       </div>
     );
   }
   if (isError) {
     return (
-      <div className='example'>
+      <div>
         <h1>There was an error....</h1>
       </div>
     );
   }
   return (
-    <div className='example'>
+    <div>
       <h1>{user}</h1>
     </div>
   );

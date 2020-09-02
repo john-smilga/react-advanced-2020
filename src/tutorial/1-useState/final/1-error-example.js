@@ -8,12 +8,12 @@ const ErrorExample = () => {
     console.log(title);
   };
   return (
-    <div className="example">
+    <React.Fragment>
       <h2>{title}</h2>
-      <button type="button" className="btn" onClick={handleClick}>
+      <button type='button' className='btn' onClick={handleClick}>
         change title
       </button>
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 const ShowHide = () => {
   const [show, setShow] = useState(false);
   return (
-    <div className='example'>
+    <>
       <button className='btn' onClick={() => setShow(!show)}>
         show/hide
       </button>
       {show && <Item />}
-    </div>
+    </>
   );
 };
 

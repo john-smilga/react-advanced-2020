@@ -16,10 +16,10 @@ const UseEffectCleanup = () => {
   });
 
   return (
-    <div className='example'>
+    <>
       <h1>window</h1>
       <h2>{size} PX</h2>
-    </div>
+    </>
   );
 };
 

@@ -21,23 +21,23 @@ const UseStateObject = () => {
   };
   return (
     <>
-      <section className="example">
+      <section>
         <h2>regular counter</h2>
         <h1>{value}</h1>
-        <button type="button" className="btn" onClick={decrease}>
+        <button type='button' className='btn' onClick={decrease}>
           decrease
         </button>
-        <button type="button" className="btn" onClick={reset}>
+        <button type='button' className='btn' onClick={reset}>
           reset
         </button>
-        <button type="button" className="btn" onClick={increase}>
+        <button type='button' className='btn' onClick={increase}>
           increase
         </button>
       </section>
-      <section className="example">
+      <section>
         <h2>more complex counter</h2>
         <h1>{value}</h1>
-        <button type="button" className="btn" onClick={complexIncrease}>
+        <button type='button' className='btn' onClick={complexIncrease}>
           increase later
         </button>
       </section>

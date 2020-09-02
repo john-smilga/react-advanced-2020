@@ -1,12 +1,6 @@
 import React from 'react';
 
-const UseStateArray = () => {
-  const data = [
-    { id: 1, name: 'john' },
-    { id: 2, name: 'peter' },
-    { id: 3, name: 'susan' },
-    { id: 4, name: 'anna' },
-  ];
+const UseStateArray = ({ data }) => {
   const [people, setPeople] = React.useState(data);
 
   const removeItem = (id) => {
@@ -14,7 +8,7 @@ const UseStateArray = () => {
     setPeople(newPeople);
   };
   return (
-    <div className="example">
+    <>
       {people.map((person) => {
         const { id, name } = person;
         return (
@@ -24,10 +18,10 @@ const UseStateArray = () => {
           </div>
         );
       })}
-      <button className="btn" onClick={() => setPeople([])}>
+      <button className='btn' onClick={() => setPeople([])}>
         clear items
       </button>
-    </div>
+    </>
   );
 };
 
