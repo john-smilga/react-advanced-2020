@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// must be uppercase
+// don't call hooks conditonally
 
 const UseStateBasics = () => {
   // console.log(useState());
@@ -16,9 +18,9 @@ const UseStateBasics = () => {
   };
 
   return (
-    <div className="example">
+    <div className='example'>
       <h1>{text}</h1>
-      <button type="button" className="btn" onClick={handleClick}>
+      <button type='button' className='btn' onClick={handleClick}>
         change title
       </button>
     </div>
