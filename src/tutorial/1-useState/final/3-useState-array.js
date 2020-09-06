@@ -12,8 +12,8 @@ const UseStateArray = ({ data }) => {
       {people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} style={{ marginBottom: '3rem' }}>
-            <h2>{name}</h2>
+          <div key={id} className='item'>
+            <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
         );

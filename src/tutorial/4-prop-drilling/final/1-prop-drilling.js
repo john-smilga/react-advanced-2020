@@ -14,12 +14,10 @@ const PropDrilling = ({ data }) => {
   return (
     <>
       {people.map((person) => {
-        const { id, name } = person;
         return (
           <SinglePerson
-            key={id}
-            name={name}
-            id={id}
+            key={person.id}
+            {...person}
             removePerson={removePerson}
           ></SinglePerson>
         );
@@ -29,7 +27,7 @@ const PropDrilling = ({ data }) => {
 };
 const SinglePerson = ({ id, name, removePerson }) => {
   return (
-    <div style={{ marginBottom: '3rem' }}>
+    <div className='item'>
       <h4>{name}</h4>
       <RemoveButton id={id} removePerson={removePerson}></RemoveButton>
     </div>

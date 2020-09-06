@@ -23,10 +23,9 @@ const ControlledInputs = () => {
   };
   return (
     <>
-      <h4>input</h4>
-      <article>
+      <article className='form'>
         <form>
-          <div>
+          <div className='form-control'>
             <label htmlFor='firstName'>Name : </label>
             <input
               type='text'
@@ -36,7 +35,7 @@ const ControlledInputs = () => {
               onChange={handleChange}
             />
           </div>
-          <div>
+          <div className='form-control'>
             <label htmlFor='email'>Email : </label>
             <input
               type='email'
@@ -46,7 +45,7 @@ const ControlledInputs = () => {
               onChange={handleChange}
             />
           </div>
-          <div>
+          <div className='form-control'>
             <label htmlFor='age'>Age : </label>
             <input
               type='number'
@@ -63,14 +62,12 @@ const ControlledInputs = () => {
       </article>
       <article>
         {people.map((person) => {
-          const { id, name, email, age } = person;
+          const { id, firstName, email, age } = person;
           return (
-            <div key={id} style={{ marginTop: '2rem' }}>
-              <h4>
-                <span>{name} </span>
-                <span>{email} </span>
-                <span>{age}</span>
-              </h4>
+            <div key={id} className='item'>
+              <h4>{firstName}</h4>
+              <p>{email}</p>
+              <p>{age}</p>
             </div>
           );
         })}

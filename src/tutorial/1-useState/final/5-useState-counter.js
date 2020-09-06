@@ -17,11 +17,11 @@ const UseStateObject = () => {
       setValue((prevValue) => {
         return prevValue + 1;
       });
-    }, 3000);
+    }, 2000);
   };
   return (
     <>
-      <section>
+      <section style={{ margin: '4rem 0' }}>
         <h2>regular counter</h2>
         <h1>{value}</h1>
         <button type='button' className='btn' onClick={decrease}>
@@ -34,7 +34,7 @@ const UseStateObject = () => {
           increase
         </button>
       </section>
-      <section>
+      <section style={{ margin: '4rem 0' }}>
         <h2>more complex counter</h2>
         <h1>{value}</h1>
         <button type='button' className='btn' onClick={complexIncrease}>

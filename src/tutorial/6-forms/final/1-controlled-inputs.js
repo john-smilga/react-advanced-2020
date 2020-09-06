@@ -15,10 +15,9 @@ const ControlledInputs = () => {
     if (firstName && email) {
       const person = {
         id: new Date().getTime().toString(),
-        name: firstName,
+        firstName,
         email,
       };
-      console.log(person);
       setPeople((people) => {
         return [...people, person];
       });
@@ -28,10 +27,9 @@ const ControlledInputs = () => {
   };
   return (
     <>
-      <h4>input</h4>
       <article>
-        <form onSubmit={handleSubmit}>
-          <div>
+        <form className='form' onSubmit={handleSubmit}>
+          <div className='form-control'>
             <label htmlFor='firstName'>Name : </label>
             <input
               type='text'
@@ -41,7 +39,7 @@ const ControlledInputs = () => {
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
-          <div>
+          <div className='form-control'>
             <label htmlFor='email'>Email : </label>
             <input
               type='email'
@@ -50,20 +48,16 @@ const ControlledInputs = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <button type='submit' className='btn'>
-            add person
-          </button>
+          <button type='submit'>add person</button>
         </form>
       </article>
       <article>
         {people.map((person) => {
-          const { id, name, email } = person;
+          const { id, firstName, email } = person;
           return (
-            <div key={id} style={{ marginTop: '2rem' }}>
-              <h4>
-                <span>{name} </span>
-                <span>{email}</span>
-              </h4>
+            <div key={id} className='item'>
+              <h4>{firstName}</h4>
+              <p>{email}</p>
             </div>
           );
         })}
