@@ -21,7 +21,7 @@ function reducer(state, action) {
   if (action.type === 'CLOSE_MODAL') {
     return { ...state, showModal: false };
   }
-  return state;
+  throw new Error('no matching action type');
 }
 
 const Index = () => {

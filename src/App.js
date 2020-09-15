@@ -1,10 +1,9 @@
 import React from 'react';
-import { data } from './data';
-import Setup from './tutorial/7-useReducer/final';
+import Final from './tutorial/2-useEffect/final/3-useEffect-second-argument';
 function App() {
   return (
     <div className='container'>
-      <Setup></Setup>
+      <Final />
     </div>
   );
 }
