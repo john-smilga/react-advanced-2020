@@ -1,9 +1,13 @@
 import React, { useState, useContext } from 'react';
+import { data } from '../../../data';
 
+// use only if more than one level
+// set it up globally
+// fix - context api, redux (for more complex cases)
 const PersonContext = React.createContext();
 // two components Provider, Consumer
 
-const ContextAPI = ({ data }) => {
+const ContextAPI = () => {
   const [people, setPeople] = useState(data);
   const removePerson = (id) => {
     setPeople((people) => {
@@ -11,23 +15,29 @@ const ContextAPI = ({ data }) => {
     });
   };
   return (
-    <PersonContext.Provider value={{ removePerson }}>
-      {people.map((person) => {
-        return <SinglePerson key={person.id} {...person}></SinglePerson>;
-      })}
+    <PersonContext.Provider value={{ people, removePerson }}>
+      <List />
     </PersonContext.Provider>
   );
 };
+const List = () => {
+  const { people } = useContext(PersonContext);
+  return (
+    <>
+      {people.map((person) => {
+        return <SinglePerson key={person.id} {...person}></SinglePerson>;
+      })}
+    </>
+  );
+};
 const SinglePerson = ({ id, name }) => {
+  const { removePerson } = useContext(PersonContext);
   return (
     <div className='item'>
       <h4>{name}</h4>
-      <RemoveButton id={id}></RemoveButton>
+      <button onClick={() => removePerson(id)}></button>
     </div>
   );
 };
-const RemoveButton = ({ id }) => {
-  const { removePerson } = useContext(PersonContext);
-  return <button onClick={() => removePerson(id)}>remove</button>;
-};
+
 export default ContextAPI;

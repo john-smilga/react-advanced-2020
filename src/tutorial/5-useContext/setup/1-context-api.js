@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { data } from '../../../data';
-// more components
+// use only if more than one level
+// set it up globally
 // fix - context api, redux (for more complex cases)
 
 const PropDrilling = () => {
