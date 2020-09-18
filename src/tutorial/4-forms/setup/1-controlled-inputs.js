@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 // value, onChange
 
 const ControlledInputs = () => {
-  return <h2>controlled inputs</h2>;
+  return <h>controlled inputs</h>;
 };
 
 export default ControlledInputs;
