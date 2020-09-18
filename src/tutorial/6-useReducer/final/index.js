@@ -1,39 +1,20 @@
 import React, { useState, useReducer } from 'react';
 import Modal from './Modal';
+import { data } from '../../../data';
 // reducer function
-function reducer(state, action) {
-  if (action.type === 'ADD_ITEM') {
-    const newItems = [...state.items, action.payload];
-    return {
-      ...state,
-      items: newItems,
-      showModal: true,
-      modalContent: 'item added',
-    };
-  }
-  if (action.type === 'REMOVE_ITEM') {
-    const newItems = state.items.filter((item) => item.id !== action.payload);
-    return { ...state, items: newItems };
-  }
-  if (action.type === 'NO_VALUE') {
-    return { ...state, showModal: true, modalContent: 'please enter value' };
-  }
-  if (action.type === 'CLOSE_MODAL') {
-    return { ...state, showModal: false };
-  }
-  throw new Error('no matching action type');
-}
-
+import { reducer } from './reducer';
+const defaultState = {
+  people: [],
+  isModalOpen: false,
+  modalContent: '',
+};
 const Index = () => {
-  const [state, dispatch] = useReducer(reducer, {
-    items: [],
-    showModal: false,
-  });
   const [name, setName] = useState('');
+  const [state, dispatch] = useReducer(reducer, defaultState);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
-      const newItem = { id: new Date().getMilliseconds().toString(), name };
+      const newItem = { id: new Date().getTime().toString(), name };
       dispatch({ type: 'ADD_ITEM', payload: newItem });
       setName('');
     } else {
@@ -45,10 +26,10 @@ const Index = () => {
   };
   return (
     <>
-      {state.showModal && (
+      {state.isModalOpen && (
         <Modal closeModal={closeModal} modalContent={state.modalContent} />
       )}
-      <form className='form'>
+      <form onSubmit={handleSubmit} className='form'>
         <div>
           <input
             type='text'
@@ -56,17 +37,15 @@ const Index = () => {
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <button type='submit' onClick={handleSubmit}>
-          add
-        </button>
+        <button type='submit'>add </button>
       </form>
-      {state.items.map((item) => {
+      {state.people.map((person) => {
         return (
-          <div key={item.id} className='item'>
-            <h4>{item.name}</h4>
+          <div key={person.id} className='item'>
+            <h4>{person.name}</h4>
             <button
               onClick={() =>
-                dispatch({ type: 'REMOVE_ITEM', payload: item.id })
+                dispatch({ type: 'REMOVE_ITEM', payload: person.id })
               }
             >
               remove
