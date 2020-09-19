@@ -1,9 +1,9 @@
 import React from 'react';
-import Setup from './tutorial/6-useReducer/setup';
+
 function App() {
   return (
     <div className='container'>
-      <Setup />
+      <h2>advanced react </h2>
     </div>
   );
 }
