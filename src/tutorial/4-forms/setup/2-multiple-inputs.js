@@ -42,7 +42,7 @@ const ControlledInputs = () => {
           <div className='form-control'>
             <label htmlFor='email'>Email : </label>
             <input
-              type='text'
+              type='email'
               id='email'
               name='email'
               value={email}
