@@ -297,3 +297,14 @@ p {
 .product h4 {
   margin-top: 1rem;
 }
+
+.product button {
+  margin-bottom: 1rem;
+  background: var(--clr-primary-5);
+  border-radius: var(--radius);
+  border-color: transparent;
+  color: var(--clr-white);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
