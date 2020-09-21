@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Product from './Product';
+import { useFetch } from '../../9-custom-hooks/final/2-useFecth';
 const url = 'https://course-api.netlify.app/api/react-prop-types-example';
 const Index = () => {
-  const [products, setProducts] = useState([]);
-
-  const getProducts = async () => {
-    const response = await fetch(url);
-    const products = await response.json();
-    setProducts(products);
-  };
-
-  useEffect(() => {
-    getProducts();
-  }, []);
-
+  const { products } = useFetch(url);
   return (
     <div>
       <h2>products</h2>

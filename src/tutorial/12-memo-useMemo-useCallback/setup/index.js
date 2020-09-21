@@ -1,19 +1,12 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
+import { useFetch } from '../../9-custom-hooks/final/2-useFecth';
+
 const url = 'https://course-api.netlify.app/api/javascript-store-products';
 // every time props or state changes, component re-renders
 
 const Index = () => {
-  const [products, setProducts] = useState([]);
+  const { products } = useFetch(url);
   const [count, setCount] = useState(0);
-
-  const getProducts = async () => {
-    const response = await fetch(url);
-    const products = await response.json();
-    setProducts(products);
-  };
-  useEffect(() => {
-    getProducts();
-  }, []);
 
   return (
     <>
