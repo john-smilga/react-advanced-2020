@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { useFetch } from '../../9-custom-hooks/final/2-useFecth';
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch';
 
 const url = 'https://course-api.netlify.app/api/javascript-store-products';
 // every time props or state changes, component re-renders
