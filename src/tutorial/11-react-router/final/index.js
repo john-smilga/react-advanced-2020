@@ -13,16 +13,15 @@ const ReactRouterSetup = () => {
   return (
     <Router>
       <Navbar />
-      {/* Switch */}
       <Switch>
         <Route exact path='/'>
-          <Home></Home>
+          <Home />
         </Route>
         <Route path='/about'>
-          <About></About>
+          <About />
         </Route>
         <Route path='/people'>
-          <People></People>
+          <People />
         </Route>
         <Route path='/person/:id' children={<Person />}></Route>
         <Route path='*'>

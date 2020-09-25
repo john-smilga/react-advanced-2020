@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
-  return (
-    <nav>
-      <h2>navbar</h2>
-    </nav>
-  );
+  return <nav>navbar</nav>;
 };
 
 export default Navbar;
