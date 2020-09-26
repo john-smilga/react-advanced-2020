@@ -2,7 +2,7 @@
 
 #### useState
 
-1. Birtday Reminder
+1. Birthday Reminder
 
 #### useEffect and Conditional Rendering
 
