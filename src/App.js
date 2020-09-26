@@ -1,9 +1,8 @@
 import React from 'react';
-
 function App() {
   return (
     <div className='container'>
-      <h2>advanced react</h2>
+      <h2>Advanced Tutorial</h2>
     </div>
   );
 }
