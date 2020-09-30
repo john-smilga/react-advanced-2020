@@ -8,7 +8,7 @@
 
 2. Tours
 3. Reviews
-4. Questions
+4. Accordion
 5. Menu
 6. Tabs
 7. Stripe Menu
