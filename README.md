@@ -11,22 +11,22 @@
 4. Accordion
 5. Menu
 6. Tabs
-7. Stripe Menu
-8. Slider
+7. Slider
 
 #### Forms
 
-9. Lorem Ipsum Generator
-10. Color Shades Generator
-11. Grocery Bud
+8. Lorem Ipsum Generator
+9. Color Shades Generator
+10. Grocery Bud
 
 #### useRef
 
-12. Navbar
+11. Navbar
 
 #### useContext
 
-13. Modal and Sidebar
+12. Modal and Sidebar
+13. Stripe Menus
 
 #### useReducer
 
