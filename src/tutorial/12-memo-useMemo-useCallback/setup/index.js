@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { useFetch } from "../../9-custom-hooks/final/2-useFetch";
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch';
 
-const url = "https://course-api.netlify.app/api/javascript-store-products";
+const url = 'https://course-api.netlify.app/api/javascript-store-products';
 // every time props or state changes, component re-renders
 const Index = () => {
   const { products } = useFetch(url);
@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <>
       <h1>Count : {count}</h1>
-      <button className="btn" onClick={() => setCount(count + 1)}>
+      <button className='btn' onClick={() => setCount(count + 1)}>
         click me
       </button>
       <BigList products={products} />
@@ -20,7 +20,7 @@ const Index = () => {
 
 const BigList = ({ products }) => {
   return (
-    <section className="products">
+    <section className='products'>
       {products.map((product) => {
         return <SingleProduct key={product.id} {...product}></SingleProduct>;
       })}
@@ -34,7 +34,7 @@ const SingleProduct = ({ fields }) => {
   const image = fields.image[0].url;
 
   return (
-    <article className="product">
+    <article className='product'>
       <img src={image} alt={name} />
       <h4>{name}</h4>
       <p>${price}</p>
