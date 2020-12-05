@@ -28,7 +28,7 @@
 12. Modal and Sidebar
 13. Stripe Menus
 
-#### useReducer
+#### useReducer and useContext
 
 14. Cart
 
