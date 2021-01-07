@@ -1,3 +1,5 @@
+## Notes
+Lecture Notes for Hooks: https://www.notion.so/Free-Code-Camp-React-John-Smilga-18773872ca1b43dea6c315c905171dec
 ## Corresponding Projects
 
 #### useState
