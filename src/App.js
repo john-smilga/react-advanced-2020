@@ -8,6 +8,9 @@ import UseStateCounter from './tutorial/1-useState/setup/5-useState-counter';
 import UseEffectBasic from './tutorial/2-useEffect/setup/1-useEffect-basics';
 import UseEffectCleanup from './tutorial/2-useEffect/setup/2-useEffect-cleanup';
 import UseEffectFetch from './tutorial/2-useEffect/setup/3-useEffect-fetch-data';
+import MultipleReturn from './tutorial/3-conditional-rendering/setup/1-multiple-returns';
+import ShortCircuit from './tutorial/3-conditional-rendering/setup/2-short-circuit';
+import ShowHide from './tutorial/3-conditional-rendering/setup/3-show-hide';
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
         <UseEffectBasic />
         <UseEffectCleanup />
         <UseEffectFetch />
+      <h1>conditional rendering</h1>
+        <MultipleReturn />
+        <ShortCircuit />
+        <ShowHide />
     </div>
   )
 }
