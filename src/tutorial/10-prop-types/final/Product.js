@@ -20,7 +20,9 @@ Product.propTypes = {
 // Product.defaultProps = {
 //   name: 'default name',
 //   price: 3.99,
-//   image: defaultImage,
+//   image: {
+//      url: defaultImage
+//   }
 // };
 
 export default Product;
