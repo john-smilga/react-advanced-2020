@@ -4,7 +4,7 @@ const UseStateObject = () => {
   const [person, setPerson] = useState({name:'hashan', age:24, message: 'random message'});
   
   const changeMessage = () => {
-    setPerson({name : person.name, age : person.age, message : 'hello world'})
+    setPerson({...person, message : 'hello world'})
   }
 
 
