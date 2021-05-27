@@ -4,6 +4,7 @@ const ErrorExample = () => {
   let title = ' Hashan Eranga ';
 
   const handleClick = () =>{
+    title = 'hello hashan';
     console.log(title);
   } 
   return (
