@@ -3,6 +3,11 @@ import { data } from '../../../data';
 
 const UseStateArray = () => {
   const [people, setPeople] = React.useState(data)
+
+  const handleClick = () =>{
+    setPeople([])
+  }
+
   return(
     <>
       {
@@ -13,7 +18,7 @@ const UseStateArray = () => {
           </div>
         })
       }
-      <button className="btn" type='button' onClick={() => setPeople([])}>
+      <button className="btn" type='button' onClick={handleClick}>
         clear item
       </button>
     </>
