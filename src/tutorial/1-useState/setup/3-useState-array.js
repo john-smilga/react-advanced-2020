@@ -8,6 +8,11 @@ const UseStateArray = () => {
     setPeople([])
   }
 
+  const removeItem = (id) =>{
+    let newPeople = people.filter((person) => person.id !== id)
+    setPeople(newPeople)
+  }
+
   return(
     <>
       {
@@ -15,6 +20,9 @@ const UseStateArray = () => {
           const {id, name} = person
           return <div className="item" key={id}>
             <h4>{name}</h4>
+            <button className="btn" onClick={() => removeItem(id)}>
+              remove
+            </button>
           </div>
         })
       }
