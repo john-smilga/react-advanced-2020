@@ -33,3 +33,8 @@
 14. Cart
 
 #### React Router
+
+## More Infomation On Prjoects
+1. Course was taken on Udemy: https://www.udemy.com/course/react-tutorial-and-projects-course/
+2. Course taught by Jogn Smilgna
+3. All my contribution that was learned is on the setup file. 
