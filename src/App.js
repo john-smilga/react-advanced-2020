@@ -11,6 +11,7 @@ import UseEffectFetch from './tutorial/2-useEffect/setup/3-useEffect-fetch-data'
 import MultipleReturn from './tutorial/3-conditional-rendering/setup/1-multiple-returns';
 import ShortCircuit from './tutorial/3-conditional-rendering/setup/2-short-circuit';
 import ShowHide from './tutorial/3-conditional-rendering/setup/3-show-hide';
+import ControlledInputs from './tutorial/4-forms/setup/1-controlled-inputs';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         <MultipleReturn />
         <ShortCircuit />
         <ShowHide />
+      <h1>Forms</h1>
+        <ControlledInputs />
     </div>
   )
 }
