@@ -14,6 +14,7 @@ const UseStateBasics = () => {
 		text === 'random title' ? setText('hello world') : setText('random title');
 		// setText('hello world');
 		console.log(text);
+		console.log(text);
 	};
 
 	return (
