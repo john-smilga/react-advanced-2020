@@ -1,5 +1,5 @@
 import React from 'react';
-import State from './tutorial/1-useState/setup/2-useState-basics';
+import State from './tutorial/1-useState/setup/3-useState-array';
 // import Final from './tutorial/1-useState/final/2-useState-basics';
 
 function App() {
