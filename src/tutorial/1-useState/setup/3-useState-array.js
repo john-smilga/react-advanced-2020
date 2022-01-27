@@ -5,10 +5,11 @@ const UseStateArray = () => {
 	// const [state, setState] = useState(initialState)
 	const [people, setPeople] = useState(data);
 
+	// If callback passed as argument for setState, callback parameter is the old value
 	const removeItem = (id) => {
-		let newPeople = people.filter((person) => person.id !== id);
-		// console.log(newPeople);
-		setPeople(newPeople);
+		setPeople((oldPeople) => {
+			return oldPeople.filter((person) => person.id !== id);
+		});
 	};
 
 	return (
