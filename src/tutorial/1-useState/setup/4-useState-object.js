@@ -5,16 +5,21 @@ const UseStateObject = () => {
 
 	const changeMessage = () => {
 		// set the new state value as all person values but change "message" value
-		setPerson({ ...person, message: 'hello world' });
+		// setPerson({ ...person, message: 'hello world' });
+		setMessage('hello world');
 	};
 
-	console.log(person);
+	const [name, setName] = useState('peter');
+	const [age, setAge] = useState(24);
+	const [message, setMessage] = useState('motorlalalalal s');
+
+	// console.log(person);
 
 	return (
 		<>
-			<h3>{person.name}</h3>
-			<h3>{person.age}</h3>
-			<h3>{person.message}</h3>
+			<h3>{name}</h3>
+			<h3>{age}</h3>
+			<h3>{message}</h3>
 			<button className='btn' onClick={changeMessage}>
 				Change Message
 			</button>
