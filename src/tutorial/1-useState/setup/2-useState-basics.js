@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 const UseStateBasics = () => {
   const [text, setText] = useState("Hey");
   const clickHandler = () => {
-    setText("State Changed")
+    if (text === "Hey") {
+      setText("State Changed")
+    } else {
+      setText("Hey")
+    }
+
   }
   return <React.Fragment>
     <h2>useState basic example</h2>
