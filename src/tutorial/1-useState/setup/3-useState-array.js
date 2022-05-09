@@ -4,11 +4,9 @@ import { useState } from "react";
 
 const UseStateArray = () => {
   const [people, setPeople] = useState(data);
-
   const clearAll = () => {
     setPeople([]);
   };
-
   const clickHandler = (id) => {
     let newPeople = people.filter((person) => person.id !== id);
     setPeople(newPeople);
