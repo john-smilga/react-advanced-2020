@@ -3,20 +3,47 @@ import React, { useState } from "react";
 const UseStateCounter = () => {
   const [count, setCount] = useState(0);
   const increaceHandler = () => {
-    setCount(count + 1);
+    setTimeout(() => {
+      console.log("click");
+      // setCount(count + 1);
+      setCount((prevState) => prevState + 1);
+    }, 2000);
+    // console.log(count);
+    // setCount((prevCount) => prevCount + 1);
+    // console.log(count);
+    // setCount((prevCount) => prevCount + 1);
+    // console.log(count);
+    // console.log(count);
+    // setCount(count + 1);
+    // console.log(count);
+    // setCount(count + 1);
+    // console.log(count);
   };
+  // setTimeout(
+  //   () => {
+  //     setCount(count + 1);
+  //   },
+  //   // setCount((prevState) => {
+  //   //   console.log(prevState);
+  //   //   return prevState + 1;
+  //   // }),
+
+  //   2000
+  // );
+  // setCount(count + 1);
+
   const clearHandler = () => {
     setCount(0);
   };
   const decreaceHandler = () => {
-    setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
   };
   return (
     <>
-      <seciont style={{ margin: "4rem 0" }}>
+      <section style={{ margin: "4rem 0" }}>
         <h2>simple counter</h2>
         <h1>{count}</h1>
-      </seciont>
+      </section>
       <button type="button" className="btn" onClick={increaceHandler}>
         +
       </button>
