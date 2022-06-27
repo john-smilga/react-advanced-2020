@@ -18,7 +18,7 @@ const Example = () => {
 
   useEffect(() => {
     getProducts()
-  }, [url])
+  }, [])
   console.log(products)
   return (
     <div>
