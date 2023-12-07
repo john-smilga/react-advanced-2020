@@ -322,3 +322,14 @@ p {
   text-transform: capitalize;
   cursor: pointer;
 }
+
+.person {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  img{
+    width:50
+  }
+}
