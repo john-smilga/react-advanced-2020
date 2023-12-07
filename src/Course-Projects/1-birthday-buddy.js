@@ -19,10 +19,12 @@ const BirthdayBuddy = () => {
             return (
               <article className="person" key={id}>
                 <img src={image} alt="" style={{ width: 50 }} />
-                <div>
+                <br />
+                <div style={{ width: "55%" }}>
                   <h4>{name}</h4>
                   <p>{age}</p>
                 </div>
+                <br />
                 <button className="btn" onClick={() => clearArticle(id)}>
                   Clear
                 </button>
