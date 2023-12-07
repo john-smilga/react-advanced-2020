@@ -18,3 +18,6 @@ let amjad = new manager()
 
 amjad.work()
 // تعدد اشكال الفنكشن الواحد
+
+//What is abstraction in programming?
+// Mean as a programmer I hide all the complex code and use the importance code to reduce complexity
