@@ -3,9 +3,29 @@ import { data } from "../../../data"
 
 const UseStateArray = () => {
   const [people, setPeople] = React.useState(data)
+  //2 way to use clearItem function
+  //        |
+  //        |
+  //        |
+  //        |
+  // const clearItem = (id) => {
+  //   let newPeople = people.filter((person) => person.id !== id)
+  //   setPeople(newPeople)
+  // }
+
+  //        |
+  //        |
+  //        |
+  //        |
+  //        |
+  //
   const clearItem = (id) => {
-    let newPeople = people.filter((person) => person.id !== id)
-    setPeople(newPeople)
+    setPeople((oldPeople) => {
+      console.log(oldPeople)
+      let newPeople = oldPeople.filter((person) => person.id !== id)
+      console.log(newPeople)
+      return newPeople
+    })
   }
   return (
     <>
