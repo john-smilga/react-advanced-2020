@@ -11,13 +11,12 @@ const UseEffectBasics = () => {
     if (value > 0) {
       document.title = `New number(${value})`
     }
-  })
+  }, [value])
   return (
     <>
       <h1>{value}</h1>
       <button className="btn" onClick={() => increaseTittle()}>
-        {" "}
-        change{" "}
+        change
       </button>
     </>
   )
