@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 const UseStateObject = () => {
+  const [note, setNote] = useState(false)
   const [person, setPerson] = useState({
     name: "Saif",
     age: 36,
@@ -14,6 +15,7 @@ const UseStateObject = () => {
       }
     })
   }
+
   return (
     <>
       <h2>{person.name}</h2>
