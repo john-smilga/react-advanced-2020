@@ -1,5 +1,5 @@
 import React from "react"
-import Setup from "./tutorial/3-conditional-rendering/setup/1-multiple-returns"
+import Setup from "./tutorial/3-conditional-rendering/setup/3-show-hide"
 // import Setup from "./Course-Projects/1-birthday-buddy"
 function App() {
   return (
