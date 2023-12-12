@@ -18,9 +18,9 @@ const ThisComponent = () => {
   }
   useEffect(() => {
     window.addEventListener("resize", changeSize)
-    // return () => {
-    //   window.removeEventListener("resize", changeSize)
-    // }
+    return () => {
+      window.removeEventListener("resize", changeSize)
+    }
   }, [])
   return (
     <div>
